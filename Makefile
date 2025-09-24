@@ -21,3 +21,7 @@ startup: install
 
 clean:
 	rm $(EXECUTABLE)
+
+report:
+	mkdir -p out
+	python3 report.py
