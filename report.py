@@ -1,15 +1,13 @@
-import pytz
 from datetime import datetime
 import json
 import os
 import math
 
-TIMEZONE = pytz.timezone('America/New_York')
 MAX_HIST_COUNT = 40
 
 class Keystroke(object):
     def __init__(self, timestamp, key):
-        self.time = datetime.fromtimestamp(timestamp, TIMEZONE)
+        self.time = datetime.fromtimestamp(timestamp)
         self.key = key
     
     def to_dict(self):
